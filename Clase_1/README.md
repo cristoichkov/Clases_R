@@ -1,4 +1,46 @@
+
+### R es un lenguaje de programación orientada a objetos
+
+###### Operaciones aritmeticas basicas
+Se pueden realizar operaciones aritméticas básicas, por lo tanto, funciona como una calculadora.
+
+Comando para operaciones aritméticas básicas:
+```
+sum() ## suma
+
+prod() ## multiplicación
+
+sqrt() ## Raíz
+
+exp() ## Exponencial
+
+log() ## Logaritmo natural
+
+log10() ## Logaritmo base 10
+
+length() ## N´umero de elementos
+
+sin() ## Seno
+
+cos() ## Coseno
+
+tan() ## Tangente
+```
+* Nota.- en R y en muchos otros lenguajes de programación, el simbolo `#` se utiliza para comentar los códigos.
+
+###### Asignación de variables
+Se pueden asignar valores a una variable utilizando el simbolo `=` o `<-`. Los mas apropiado es utilizar la flecha, ya que el símbolo igual puede ocasionar confusiones en la interpretación de los códigos tanto para el lenguaje y el humano.    
+
+```
+x <- 3 ## se pueden asignar números
+y <- 6
+x*y ## y realizar operaciones entre las variables
+
+example <- "skull" ##  para asignar palabras o letras se tienen que poner entre comillas
+```
+
 ### Tipos de variables
+
 
 Una *variable* es una característica o un valor numérico que varía para cada individuo.
 
