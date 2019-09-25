@@ -1,7 +1,7 @@
 
 ### R es un lenguaje de programación orientada a objetos
 
-##### Operaciones aritmeticas basicas
+#### Operaciones aritmeticas basicas
 Se pueden realizar operaciones aritméticas básicas, por lo tanto, funciona como una calculadora.
 
 Comando para operaciones aritméticas básicas:
@@ -28,7 +28,7 @@ tan() ## Tangente
 ```
 * Nota.- en R y en muchos otros lenguajes de programación, el simbolo `#` se utiliza para comentar los códigos.
 
-##### Asignación de variables
+#### Asignación de variables
 Se pueden asignar valores a una variable utilizando el simbolo `=` o `<-`. Los mas apropiado es utilizar la flecha, ya que el símbolo igual puede ocasionar confusiones en la interpretación de los códigos tanto para el lenguaje y el humano.    
 
 ```
@@ -39,7 +39,7 @@ x*y ## y realizar operaciones entre las variables
 example <- "skull" ##  para asignar palabras o letras se tienen que poner entre comillas
 ```
 
-##### Tipos de variables
+#### Tipos de variables
 
 
 **Variable**.- valor de una característica que interese registrar de un objeto de estudio.
@@ -66,7 +66,7 @@ example <- "skull" ##  para asignar palabras o letras se tienen que poner entre 
  - Ancho del tallo.- 7.8, 4.6, 6.5, 5.6, 6.6, etc.
 
 
- ##### Estructuras de datos en R
+#### Estructuras de datos en R
 
 Tipos de datos en R:
 ```
