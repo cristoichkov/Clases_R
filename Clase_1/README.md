@@ -1,7 +1,7 @@
 
 ### R es un lenguaje de programación orientada a objetos
 
-#### Operaciones aritmeticas basicas
+#### Operaciones aritméticas básicas
 Se pueden realizar operaciones aritméticas básicas, por lo tanto, funciona como una calculadora.
 
 Comando para operaciones aritméticas básicas:
@@ -18,7 +18,7 @@ log() ## Logaritmo natural
 
 log10() ## Logaritmo base 10
 
-length() ## N´umero de elementos
+length() ## Número de elementos
 
 sin() ## Seno
 
@@ -26,10 +26,10 @@ cos() ## Coseno
 
 tan() ## Tangente
 ```
-* Nota.- en R y en muchos otros lenguajes de programación, el simbolo `#` se utiliza para comentar los códigos.
+* Nota.- en R y en muchos otros lenguajes de programación, el símbolo `#` se utiliza para comentar los códigos.
 
 #### Asignación de variables
-Se pueden asignar valores a una variable utilizando el simbolo `=` o `<-`. Los mas apropiado es utilizar la flecha, ya que el símbolo igual puede ocasionar confusiones en la interpretación de los códigos tanto para el lenguaje y el humano.    
+Se pueden asignar valores a una variable utilizando el símbolo `=` o `<-`. Los mas apropiado es utilizar la flecha, ya que el símbolo igual puede ocasionar confusiones en la interpretación de los códigos tanto para el lenguaje y el humano.    
 
 ```
 x <- 3 ## se pueden asignar números
@@ -38,6 +38,13 @@ x*y ## y realizar operaciones entre las variables
 
 example <- "skull" ##  para asignar palabras o letras se tienen que poner entre comillas
 ```
+
+<p align="center">
+<img src="R_as_var.jpg" width="550">
+</p>
+<p align="center">
+Figura 1.- El nombre de la variable puede ser cualquiera que el usuario elija, se recomienda que no tenga espacios ni caracteres especiales.
+</p>
 
 #### Tipos de variables
 
@@ -87,3 +94,11 @@ typeof("skull") ## character siempre se ponen entre comillas
 ```
 
 **Vectores**.- es una estructura de datos básica en R que contiene elementos del mismo tipo.
+
+En R los vectores son generalmnete creados usando la funcion `c()`.
+```
+## Ejemplo de vector
+
+vec <-
+
+```
