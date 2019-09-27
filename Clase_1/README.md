@@ -40,7 +40,7 @@ example <- "skull" ##  para asignar palabras o letras se tienen que poner entre 
 ```
 
 <p align="center">
-<img src="R_as_var.jpg" width="550">
+<img src= "R_as_var.png" width="300">
 </p>
 <p align="center">
 Figura 1.- El nombre de la variable puede ser cualquiera que el usuario elija, se recomienda que no tenga espacios ni caracteres especiales.
@@ -93,12 +93,117 @@ typeof("skull") ## character siempre se ponen entre comillas
 
 ```
 
-**Vectores**.- es una estructura de datos básica en R que contiene elementos del mismo tipo.
+#### Vectores
 
-En R los vectores son generalmnete creados usando la funcion `c()`.
+Un vector es una estructura de datos básica en R que contiene elementos del mismo tipo.
+
+
+**Crear vectores**
+
+Ejemplo 1.- En R los vectores son generalmente creados usando la funcion `c()`.
 ```
 ## Ejemplo de vector
 
-vec <-
+vec_num <- c(2, 3, 6, 2, 7, 10, 23)
 
+typeof(vec_num)
+
+class(vec_num)
+
+vec_char <- c("blanco", "rojo", "azul", "rojo") ## siempre entre comillas
+
+typeof(vec_chr)
+
+class(vec_chr)
+
+vec <- c(1, 4, "blanco", "azul") ## que resultado nos da?
+
+## Para conocer cuantos elementos contiene un vector se utiliza la función  lenght()
+
+lenght(vec_num)
+```
+
+Ejemplo 2.- Crear un vector usando el operador `:`
+```
+x <- 1:7
+
+y <- 2:-2
+```
+
+Ejemplo 3.- Crear un vector con la función seq()
+```
+seq(1, 3, by=0.2)  ## crea un vector del 1 al 3 incrementando 0.2 cada vez
+
+seq(1, 5, length.out=4) ## crea un vector del 1 al 5 con 4 elementos
+```
+
+Ejemplo 4.- Crear un vector con la función rep()
+```
+rep(c(0, 0, 7), times = 3) ## el vector se repetiré 3 veces
+
+rep(c(2, 4, 2), each = 3) ## se repetirá cada elemento del vector tres veces,  
+
+rep(c(0, 7), times = c(4,2)) ## el primer elemento del vector se repetirá 4 veces y el segundo 2 veces
+```
+
+
+**Acceder a los elementos de un vector**
+
+
+Se puede acceder a los elementos de un vector mediante indexación vectorial. El índice vectorial en R comienza desde 1, a diferencia de la mayoría de los lenguajes de programación donde el índice comienza desde 0 (p. ej. python).
+
+```
+vec_num <- c(2, 3, 6, 2, 7, 10, 23)
+
+vec_num[3] ## acceder al tercer elemento
+
+vec_num[c(2, 4)]  ## acceder al segundo y cuarto elemento
+
+vec_num[-6]  ## selecciona todos los elementos excepto el sexto
+
+vec_num[vec_num < 7]  ## filtra los elemento menores a 7
+
+vec_num[vec_num <= 7]  ## filtra los elemento menores o iguales a 7
+```
+**Operaciones con vectores**
+
+Las operaciones aritméticas de vectores se realizan elemento por elemento.
+
+```
+x <- c(2, 3, 5, 4, 3)
+
+x + 5  ## sumar 5 a cada elemento del vectores
+
+x * 5  ## multiplicar cada elemento por 5
+
+y <- c(5, 4, 8, 7, 10)
+
+x + y ## los dos vectores tienen que ser de la misma longitud
+
+
+## si los vectores tienen longitudes diferentes y el mayor es múltiplo del menor
+## se reciclan los números del menor.
+
+x <- c(1, 5) ## longitud 2
+
+y <- c(5, 2, 4, 5, 4, 2, 4, 5) ## longitud 8
+
+x + y
+
+## se suma el elemento 1 de x al elemento 1 de y así sucesivamente hasta completar la
+## longitud de x, ahora el elemento 1 de x se suma al elemento 3 de y y así sucesivamente.
+```
+
+**Combinar vectores**
+
+```
+fruits <- c("Apple", "oranges", "banana")
+
+vegetables <- c("cabbage", "spinach", "tomatoes")
+
+all_basket_items <- c(fruits, vegetables)
+
+## fruits seran los primeros elemento seguidos de vegetables
+
+all_basket_items
 ```
