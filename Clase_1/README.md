@@ -1,6 +1,3 @@
-
-### R es un lenguaje de programación orientada a objetos
-
 #### Operaciones aritméticas básicas
 Se pueden realizar operaciones aritméticas básicas, por lo tanto, funciona como una calculadora.
 
