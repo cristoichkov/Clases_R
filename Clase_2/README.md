@@ -43,7 +43,7 @@ Ejemplo 3.- Crear matrices utilizando las función  `rbind()`.
 ```
 ## cada vector corresponderá a una filas
 
-cbind(c(1,2,3),c(4,5,6)) ## crea una matriz de 2x3
+rbind(c(1,2,3),c(4,5,6)) ## crea una matriz de 2x3
 
 ## podemos crear dos vectores y unirlos por filas
 
@@ -83,4 +83,84 @@ mat_ex[,2] ## seleccionara toda la segunda filas
 mat_ex[-2,-3] ## seleccionara toda la matriz excepto la segunda fila y la tercera columna
 
 mat_ex[c(2,3),c(3,4)] ## seleccionara de la fila 2 a la 3 y de la columna 3 a la 4
+```
+
+#### Nombres de filas y columnas
+Ejemplo 1.- Crear una matriz con la función `matrix()` y agregar los nombres a `row` y `col` utilizando el argumento `dimnames`.
+```
+## Crear una matriz 3x3 del 1 al 9 con nombre de filas y columnas
+x <- matrix(1:9, nrow = 3, dimnames = list(c("X","Y","Z"), c("A","B","C")))
+
+## resultado
+  A B C
+X 1 4 7
+Y 2 5 8
+Z 3 6 9
+
+## Ahora podemos acceder a los elementos de la matriz por su nombres
+
+x["Z", "C"]
+```
+
+Ejemplo 2.- Agregar o cambiar los nombres de filas y columnas con las funciones `colnames()` y `rownames()`.
+
+```
+## Crea una matriz de caracteres 3x2
+
+fruits <- matrix(c("Apple", "oranges", "banana", "cabbage", "spinach", "tomatoes"), 3, 2)
+
+## Cambiar los nombres de las columnas
+
+colnames(fruits) <- c("fruits", "vegetables")
+
+## Cambiar los nombres de las filas
+
+rownames(fruits) <- c("one", "two", "three")
+
+## renombrar las filas y columnas
+
+colnames(fruits) <- c("C1","C2")
+
+rownames(fruits) <- c("R1","R2","R3")
+```
+#### Opreaciones con matrices
+Ejemplo 1.- Matriz transpuesta
+```
+## Cambiar el orden de una matrix con la función t()
+
+vec <- sample(1:50,12,replace = F) ## Crea un vector de 12 números aleatorios que pueden ir del 1 al 50  
+
+mat <- matrix(vec, 3, 4) ## crea una matriz con el vector anterior de 3x4
+
+tmat <- t(mat) ## Matriz transpuesta
+```
+Ejemplo 2.-Operaciones matemáticas
+```
+mat + 5 ## suma 5 a cada elemento de la Matriz
+
+mat * 2 ## multiplica por 2 cada elemento de la Matriz
+
+mat ^ 3 ## eleva al cubo cada elemento de la Matriz
+
+```
+Ejemplo 3.- Operaciones de matrices
+```
+## crea dos matrices
+
+mat1 <- matrix(sample(1:9, 9, replace = TRUE), nrow = 3, ncol = 3, byrow = FALSE)
+mat2 <- matrix(sample(1:9, 9, replace = TRUE), nrow = 3, ncol = 3, byrow = TRUE)
+
+mat3 <- mat1 + mat2 ## como hizo la suma?
+```
+Ejemplo 4.- Operaciones estadísticas con matrices
+```
+x <- matrix(1:9, 3,3)
+
+colSums(x) ## suma los elemento por columnas
+
+rowSums(x) ## suma los elemento por filas
+
+colMeans(x) ## media por columnas
+
+colMeans(x) ## media por filas
 ```
