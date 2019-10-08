@@ -13,9 +13,11 @@ Figura 1.- Matriz de orden MxN números dispuestos en M filas y N columnas.
 #### Crear Matrices
 Ejemplo 1.- Se pueden crear matrices con la función `matrix()`.
 ```
-## primer elemento = número o carácter que sera parte de la matriz
-## segundo elemento = número de filas (row)
-## tercer elemento = número de columnas (col)
+## data = número, carácter o vector que sera parte de la matriz
+## nrow = número de filas
+## ncol elemento = número de columnas
+
+matrix(data, nrow = rows, ncol = cols)
 
 matrix("a",2,3) ## puede contener caracteres
 
@@ -76,9 +78,9 @@ mat_ex <- matrix(1:12,3,4) ## crea una matriz 3x4
 
 mat_ex[2,4] ## acceder al elemento de la fila 2 y columna
 
-mat_ex[3,] ## seleccionara toda la tercera filas
+mat_ex[3,] ## seleccionara toda la tercera fila
 
-mat_ex[,2] ## seleccionara toda la segunda filas
+mat_ex[,2] ## seleccionara toda la segunda columna
 
 mat_ex[-2,-3] ## seleccionara toda la matriz excepto la segunda fila y la tercera columna
 
