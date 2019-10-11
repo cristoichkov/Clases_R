@@ -102,7 +102,7 @@ head(iris) ## ver las primeras 6 filas
 
 tail(iris) ## ver las ultimas 6 filas
 
-str(iris) ## estructura de Datos
+str(iris) ## estructura de datos
 
 summary(iris) ## resumen rápido de los datos
 
@@ -116,7 +116,7 @@ ncol(iris) ## número de columnas = # de variables
 #### Manipulación de data frames
 Es similar a una matriz, por lo tanto se pueden utilizar los mismos comandos.
 
-Ejercicio:
+Ejercicio 1:
 ```
 ## Extrae las variables Species y Sepal.Width
 
@@ -127,4 +127,22 @@ Ejercicio:
 ## Cambia los nombres de las columnas (Especies, Petalo_Ancho, Petalo_Largo, Sepalo_Ancho, Sepalo_Largo)
 
 ## Obtén el promedio del ancho del sépalo por especie
+```
+
+También se puede acceder a las columnas de un data frame con el operador `$`.
+```
+iris$Species ## selecciona la variable Species
+
+iris$Petal.Width  ## selecciona la variable ancho del pétalo
+
+iris[iris$Species == "setosa", ] ## seleccionar la especie setosa
+```
+
+Ejercicio 2:
+```
+## Selecciona la especie versicolor y la variable Petal.Length
+
+## Filtra los valores mayores a 5 
+
+## Filtra los valores menores o iguales a 2
 ```
