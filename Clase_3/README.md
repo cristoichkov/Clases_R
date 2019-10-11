@@ -57,7 +57,7 @@ x <- c(1:10)
 x[(x>8) | (x<5)]
 ```
 
-##### Datos perdidos
+#### Datos perdidos
 Los valores faltantes (missing data) se representan con el símbolo `NA`. Es importante saber si nuestros datos tienen datos faltantes, ya que generalmente las pruebas estadísticas son sensibles o no aceptan NAs.
 
 ```
