@@ -75,5 +75,56 @@ all_obj[[8]] <- eight   ## guardarlo en la lista en la posición 8
 
 all_obj[["eight"]] <- eight   ## guardarlo con un nombre
 
-all_obj[[8]] <- NULL  ## eliminar el octavo elemento 
+all_obj[[8]] <- NULL  ## eliminar el octavo elemento
 ```
+
+####  Rutas (path, en inglés)
+
+Las rutas sirven para localizar un archivo o carpeta, siguiendo una estructura de directorios o árbol de directorios.
+
+```
++-- /
+|	+--home/
+|	     +--cactus/
+|	          +-- Documentos/
+|	                +--Clases_R/
+|			                +--Clase_4/
+|		                         +--README.md
+|	                             +--data/
+|	                                  +--Mediciones.csv
+|	                             +--meta/
+|	                                  +--Info_data.csv
+|	                             +--out/
+|	                                  +--Plot_PCA.jpg
+|	                             +--bin/
+|	                                  +--PCA_script.r
+```
+
+#### Rutas relativas y absolutas
+Una ruta *absoluta* representa la ruta completa del recurso. Dicho de otra forma, se parte desde el directorio raíz hasta llegar al recurso.
+
+```
+/home/cactus/Documentos/Clases_R/Clase_4/data/Mediciones.csv
+```
+
+Las rutas relativas representa sólo una parte de la ruta. Esto es posible porque en las rutas relativas se tiene en cuenta el directorio actual de trabajo.
+
+```
+Clases_R/Clase_4/data/Mediciones.csv
+```
+#### Directorio de trabajo (Working directory)
+
+ El directorio de trabajo es dónde estamos, al menos que le indiques lo contrario, todo archivo que se genere como parte de la ejecución de un programa se guardará aquí. También este será el lugar donde cualquier programa/script buscará los archivos que le pidas, y NO los encontrará si no están exactamente ahí.
+
+Obtener la ruta del directorio de trabajo en R
+```
+## Ejemplo con base en la estructura anterior
+
+getwd()
+
+[1] "/home/cactus"
+```
+
+#### Cambiar de directorio de trabajo en R
+
+Para cambiar de directorio hay que ir a `Session` -> `Set Working Directory`
