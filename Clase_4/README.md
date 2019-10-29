@@ -1,0 +1,79 @@
+#### Listas
+
+Una lista en R es un objeto que consiste en una colección de objetos ordenados conocidos como *componentes*. Los tipos de datos que podemos almacenar en una lista van desde simples caracteres, números, vectores, matrices, data frames, entre otros tipos de objetos.
+
+#### Crear una Listas
+
+Podemos crear una lista utilizando la función `list()`
+
+```
+chr <- "A" ## asignar un carácter
+
+num <- 23  ## asignar un número
+
+vec_num <- c(2, 3, 6, 2, 7, 10, 23)  ## crear un vector numérico
+
+vec_char <- c("blanco", "rojo", "azul", "rojo")  ## crear un vector de caracteres
+
+mat_char <- matrix(c("uno", "dos", "tres"),3,3)  ## crear una matriz de caracteres
+
+mat_num <- matrix(1:12,3,4)  ## crear una matriz numérica
+
+iris <- iris  ##  asignar un data frame
+
+## Crear la lista con todos los objetos antes creados utilizando la función list
+
+all_obj <- list(chr, num, vec_num, vec_char, mat_char, mat_num, iris)
+```
+
+#### Acceder a los componentes de una lista
+
+```
+## los componentes de las listas se encuentran en el orden que se colocaron
+str(all_obj)  ## en este caso la lista all_obj contiene 7 componentes
+
+## Para entrar a los componentes de utiliza doble corchete
+
+all_obj[[3]]  
+
+all_obj[[5]]
+
+all_obj[[7]]
+
+## Para entrar a los elementos de cada componente de utiliza corchetes
+
+all_obj[[3]][3]
+
+all_obj[[5]][3,2]
+
+all_obj[[7]][1:50, ]
+```
+
+#### Cambiar los nombres de los componentes de una lista
+
+```
+names(all_obj) <- c("one", "two", "three", "four", "five", "six", "seven")
+
+## ahora podremos acceder a los componentes de una lista utilizando el operador `$`
+
+all_obj$one
+
+all_obj$four
+
+all_obj$four[4]
+
+all_obj$six[2,4]
+
+all_obj$seven$Species
+```
+
+#### Agregar y quitar componentes a una lista
+```
+eight <- c(3,4,3,6,7)  ## crear nuevo vector
+
+all_obj[[8]] <- eight   ## guardarlo en la lista en la posición 8
+
+all_obj[["eight"]] <- eight   ## guardarlo con un nombre
+
+all_obj[[8]] <- NULL  ## eliminar el octavo elemento 
+```
