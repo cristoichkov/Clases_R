@@ -83,6 +83,7 @@ all_obj[[8]] <- NULL  ## eliminar el octavo elemento
 Las rutas sirven para localizar un archivo o carpeta, siguiendo una estructura de directorios o árbol de directorios.
 
 ```
+<<<<<<< HEAD
 /
 └── home/
     └── cactus/
@@ -98,6 +99,23 @@ Las rutas sirven para localizar un archivo o carpeta, siguiendo una estructura d
                      │   └── Plot_PCA.jpg
                      └── bin/
                          └── PCA_script.r
+=======
++-- /
+| +--home/
+|	 +--cactus/
+|	  +--Documentos/
+|	   +--Clases_R/
+|     +--Clase_4/
+|		    +--README.md
+|	     +--data/
+|	      +--Mediciones.csv
+|	     +--meta/
+|	      +--Info_data.csv
+|	     +--out/
+|	      +--Plot_PCA.jpg
+|	     +--bin/
+|	      +--PCA_script.r
+>>>>>>> 35ee99e451f8a43d4de401091cc89cd4f9bef68e
 ```
 
 #### Rutas relativas y absolutas
