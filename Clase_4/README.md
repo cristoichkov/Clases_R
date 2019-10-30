@@ -85,19 +85,19 @@ Las rutas sirven para localizar un archivo o carpeta, siguiendo una estructura d
 ```
 +-- /
 |	+--home/
-|	     +--cactus/
-|	          +-- Documentos/
-|	                +--Clases_R/
-|			                +--Clase_4/
-|		                         +--README.md
-|	                             +--data/
-|	                                  +--Mediciones.csv
-|	                             +--meta/
-|	                                  +--Info_data.csv
-|	                             +--out/
-|	                                  +--Plot_PCA.jpg
-|	                             +--bin/
-|	                                  +--PCA_script.r
+|	    +--cactus/
+|	        +--Documentos/
+|	             +--Clases_R/
+|			             +--Clase_4/
+|		                   +--README.md
+|	                     +--data/
+|	                          +--Mediciones.csv
+|	                     +--meta/
+|	                          +--Info_data.csv
+|	                     +--out/
+|	                          +--Plot_PCA.jpg
+|	                     +--bin/
+|	                          +--PCA_script.r
 ```
 
 #### Rutas relativas y absolutas
