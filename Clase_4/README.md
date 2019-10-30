@@ -89,7 +89,7 @@ Las rutas sirven para localizar un archivo o carpeta, siguiendo una estructura d
 |	      +--Documentos/
 |	         +--Clases_R/
 |                   +--Clase_4/
-|		          +--README.md
+|		         +--README.md
 |	                 +--data/
 |	                    +--Mediciones.csv
 |	                 +--meta/
