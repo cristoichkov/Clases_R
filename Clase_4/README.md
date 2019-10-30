@@ -91,13 +91,13 @@ Las rutas sirven para localizar un archivo o carpeta, siguiendo una estructura d
                 └── Clase_4/
                      ├── README.md
                      ├── data/
-                     │   └── Mediciones.csv
+                     │   └── Radial_Spine_P01.csv
                      ├── meta/  
                      │   └── Info_data.csv
                      ├── out/
-                     │   └── Plot_PCA.jpg
+                     │   └── Results.txt
                      └── bin/
-                         └── PCA_script.r
+                         └── Read_Radial_Spine.r
 ```
 
 #### Rutas relativas y absolutas
@@ -114,9 +114,11 @@ Clases_R/Clase_4/data/Mediciones.csv
 ```
 #### Directorio de trabajo (Working directory)
 
- El directorio de trabajo es dónde estamos, al menos que le indiques lo contrario, todo archivo que se genere como parte de la ejecución de un programa se guardará aquí. También este será el lugar donde cualquier programa/script buscará los archivos que le pidas, y NO los encontrará si no están exactamente ahí.
+El directorio de trabajo (wd) es dónde estamos, al menos que le indiques lo contrario, todo archivo que se genere como parte de la ejecución de un programa se guardará aquí. También este será el lugar donde cualquier programa/script buscará los archivos que le pidas, y NO los encontrará si no están exactamente ahí.
 
-Obtener la ruta del directorio de trabajo en R
+Las rutas utilizan dos símbolos especiales, un punto (.) y dos puntos seguidos (..). Los dos puntos seguidos se utilizan para subir en la jerarquía. Un único punto representa el directorio actual.
+
+#### Obtener la ruta del directorio de trabajo en R
 ```
 ## Ejemplo con base en la estructura anterior
 
@@ -127,4 +129,16 @@ getwd()
 
 #### Cambiar de directorio de trabajo en R
 
-Para cambiar de directorio hay que ir a `Session` -> `Set Working Directory`
+Para cambiar de directorio hay que ir a `Session` -> `Set Working Directory`. Existen tres opciones para seleccionar el directorio.
+
+`To Source File Location`.- Cuando abramos un script y seleccionemos esta opción, el wd se establecerá en el lugar donde tengamos guardado el script.
+
+`To Files Pane Location`.- El wd se establecerá en donde indiquemos que están nuestros archivos de acuerdo al panel de Files.
+
+`Choose Directory...`.- Se abrirá una ventana donde podremos seleccionar la carpeta que sera nuestro wd, también podemos activar esta opción con la combinación de teclas `ctrl+shift+H`.
+
+Otra opción es utilizar la función `setwd()`
+
+```
+setwd("/home/cactus/Stoich_repos/Clases_R/Clase_4/bin")
+```
