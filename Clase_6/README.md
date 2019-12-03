@@ -201,3 +201,15 @@ if(condición) {
 <p align="center">
 Figura 1.- Representación gráfica de la estructura `if - else`.
 </p>
+
+Ejemplo:
+```
+if(5%%2 == 0){  ## %% devuelve el residuo de una división
+
+  print("par") ## si el resultado es == 0 el número es par
+
+} else {
+
+  print("impar") ## si el resultado es != 0 el número es impar
+}
+```
