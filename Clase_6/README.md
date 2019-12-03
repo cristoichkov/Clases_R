@@ -136,5 +136,68 @@ Operación(es)
 <img src= "While_loop.jpg" width="450">
 </p>
 <p align="center">
-Figura 1.- Representación gráfica de la estructura `while loop`
+Figura 1.- Representación gráfica de la estructura `while loop`.
+</p>
+
+Ejemplo:
+```
+## Crear una variable con valor de 1
+inicio <- 1
+
+## Crear el loop
+while (inicio <= 6){
+
+  ## Crear la frase con el número de loop
+  dial <- paste('Este es el loop número', inicio)
+
+  ## Sumar 1 a la variable y comenzar después de cada ciclo
+  inicio <- inicio + 1
+
+  ## Imprimir la frase
+  print(dial)
+}
+```
+
+#### Estructuras de control condicionales
+
+Este tipo de estructuras son las que incluyen alternativas de selección en base al resultado de una operación booleana (TRUE or FALSE). Según la expresión sea cierta o falsa, se ejecutará un código u otro.
+
+`if` se usa cuando queremos que una operación se ejecute únicamente cuando la condición es verdadera.
+```
+if(Condición) {
+  operación(es) si la condición es TRUE
+}
+```
+
+<p align="center">
+<img src= "if_condition.jpg" width="450">
+</p>
+<p align="center">
+Figura 1.- Representación gráfica de la estructura `if`.
+</p>
+
+Ejemplo:
+```
+if(4%%2 == 0){  ## %% devuelve el residuo de una división
+
+  print("par") ## si el resultado es = a 0 el número es par
+
+}
+```
+
+`else` se usa para en caso de que la condición de un verdadera no se cumpla.
+
+```
+if(condición) {
+  operación(es) si la condición es TRUE
+} else {
+  operación(es) si la condición es FALSE
+}
+```
+
+<p align="center">
+<img src= "if_else_condition.png" width="450">
+</p>
+<p align="center">
+Figura 1.- Representación gráfica de la estructura `if - else`.
 </p>
