@@ -121,6 +121,10 @@ for (i in names){ ## utilizamos el nombre de las variables en el loop
 }
 ```
 
+Ejercicio:
+
+1.- Modifica el `for loop` anterior para agregar la desviación estándar
+
 #### `while loop`
 
 Los `while loop` se usan para repetir hasta que se cumpla una condición específica.
@@ -213,3 +217,32 @@ if(5%%2 == 0){  ## %% devuelve el residuo de una división
   print("impar") ## si el resultado es != 0 el número es impar
 }
 ```
+`ifelse` permite vectorizar `if`, `else`. En lugar de escribir una línea de código para cada comparación, podemos usar una sola llamada a esta función, que se aplicará a todos los elementos de un vector.
+
+```
+ifelse(vector, valor si es TRUE, valor si es FALSE)
+```
+Ejemplo:
+```
+num <- 5:20
+
+ifelse(num %% 2 == 0, "par", "impar")
+```
+`ifelse` nos puede servir para categorizar una variable cuantitativa.
+```
+## Crear una variable cualitativa a partir de una cuantitativa
+## Utilizar los cuartiles (dividen a la distribución de una variable cuantitativa en cuatro partes)
+quantile(iris$Sepal.Length)
+  0%  25%  50%  75% 100%
+ 4.3  5.1  5.8  6.4  7.9
+
+## Utilizar ifelse para categorizar la variable Sepal.Length
+
+iris$sepal_length_size <- ifelse((iris$Sepal.Length <= 5.1), "chico",
+                               ifelse((iris$Sepal.Length > 5.1 & iris$Sepal.Length <= 5.8), "mediano",
+                                      ifelse((iris$Sepal.Length > 5.8 & iris$Sepal.Length <= 6.4), "grande", "enorme")))
+
+```
+Ejercicio:
+
+1.- Categorizar la variable Petal.Length como en el ejemplo anterior
