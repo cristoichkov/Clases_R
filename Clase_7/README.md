@@ -73,4 +73,34 @@ Principales funciones de dplyr:
 
 #### `select()`
 
-La funci
+Extrae columnas como una tabla
+
+<p align="center">
+<img src= "select.JPG" width="200">
+</p>
+<p align="center">
+</p>
+
+```
+select(iris, Sepal.Length, Species)
+```
+
+#### `filter()`
+
+Extrae filas que cumplan con un criterio lógico  
+
+<p align="center">
+<img src= "filter.JPG" width="200">
+</p>
+<p align="center">
+</p>
+
+```
+filter(iris, Sepal.Length > 7)
+```
+
+<p align="center">
+<img src= "logical.JPG" width="650">
+</p>
+<p align="center">
+</p>
